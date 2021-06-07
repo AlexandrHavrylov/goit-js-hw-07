@@ -9,16 +9,17 @@ const inputLengthValidation = () => {
 символа клас заменялся на валидный.  Или такой способ ок? 
   */
 
-    if (inputEl.value.length < inputEl.getAttribute('data-length')) {
+    if (inputEl.value.length != inputEl.getAttribute('data-length')) {
         inputEl.classList.add('invalid')
-        inputEl.classList.remove('valid')
+        if(inputEl.classList.contains('valid')){  inputEl.classList.remove('valid')}
+      
          
     }
 
-    if (inputEl.value.length >= inputEl.getAttribute('data-length')) {
-        inputEl.classList.remove('invalid')
+    if (inputEl.value.length == inputEl.getAttribute('data-length')) {
+         if(inputEl.classList.contains('invalid')){  inputEl.classList.remove('invalid')}
         inputEl.classList.add('valid')
-    }
+    }   
      
 }
 
