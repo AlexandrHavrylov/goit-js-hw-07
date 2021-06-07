@@ -25,13 +25,10 @@ function sizeUp(i){
 
 const elementsAdd = () => {
     for (let i = 0; i < amount; i++) {
-        const div = document.createElement('div')
-        
-        const addedDivEl = boxEl.children
+    const div = document.createElement('div') 
+    const addedDivEl = boxEl.children
     boxEl.append(div)
         
-        
-    
         addedDivEl[i].style.width = `${sizeUp(i)}px`
         addedDivEl[i].style.height = `${sizeUp(i)}px`
         addedDivEl[i].style.backgroundColor = `rgb(${getRandomRGB(0, 255)}, ${getRandomRGB(0, 255)}, ${getRandomRGB(0, 255)})`
